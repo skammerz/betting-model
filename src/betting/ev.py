@@ -11,3 +11,11 @@ def expected_value(win_probability, odds):
         win_probability * profit
         - lose_probability
     )
+
+def bet_recommendation(win_probability, odds):
+    ev = expected_value(win_probability, odds)
+
+    if ev > 0:
+        return "BET"
+    else:
+        return "PASS"
